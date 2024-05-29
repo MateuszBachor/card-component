@@ -1,0 +1,172 @@
+body {
+  font-family: "Inter", sans-serif;
+  background-color: hsl(233, 47%, 7%);
+  font-size: 15px;
+  margin: 0;
+}
+.mainContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  width: 100vw;
+  height: 100vh;
+}
+.cardContainer {
+  display: flex;
+  width: 75vw;
+  height: 60vh;
+}
+.contentContainer {
+  width: 45%;
+  height: 100%;
+  padding-left: 5%;
+  background-color: hsl(244, 38%, 16%);
+  border-radius: 10px 0 0 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+.contentTitle {
+  color: hsl(0, 0%, 100%);
+  font-size: clamp(24px, 2.5vw, 100px);
+  font-weight: bold;
+  max-width: 80%;
+}
+.contentDescription {
+  max-width: 75%;
+  margin-top: 5%;
+  /* color: hsla(0, 0%, 100%, 0.75); */
+  color: hsla(0, 0%, 100%, 0.6);
+
+  font-size: clamp(12px, 1vw, 80px);
+  line-height: 150%;
+}
+.statsContainer {
+  display: flex;
+  margin-top: 15%;
+  align-items: center;
+  justify-content: space-between;
+  width: 75%;
+}
+.statsElem {
+  display: flex;
+  flex-direction: column;
+  font-size: clamp(12px, 0.8vw, 90px);
+  color: hsla(0, 0%, 100%, 0.6);
+
+  letter-spacing: 1.5px;
+}
+.statsElemCount {
+  color: white;
+  font-size: clamp(14px, 1.5vw, 90px);
+  font-weight: bold;
+  margin-bottom: 5%;
+}
+.headerImage {
+  width: 100%;
+  height: 100%;
+  border-radius: 0px 10px 10px 0;
+}
+.imageContainer {
+  position: relative;
+  width: 50%;
+  height: 100%;
+}
+.imageContainer::before {
+  border-radius: 0px 10px 10px 0;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /* background-color: hsl(279deg 90.23% 21.96% / 62%); */
+  /* background-color: hsl(277, 64%, 61%, 0.6); */
+  background-color: hsl(277, 90%, 35%, 0.4);
+  pointer-events: none;
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .cardContainer {
+    width: 90vw;
+    height: 50vh;
+  }
+  .contentContainer {
+    width: 55%;
+  }
+}
+@media (min-width: 481px) and (max-width: 768px) {
+  .cardContainer {
+    width: 97vw;
+    height: 43vh;
+  }
+  .contentContainer {
+    width: 59%;
+  }
+  .contentDescription {
+    max-width: 80%;
+  }
+  .statsContainer {
+    width: 80%;
+  }
+  .statsElem {
+    font-size: clamp(9px, 1vw, 90px);
+  }
+}
+
+@media (max-width: 480px) {
+  .cardContainer {
+    flex-direction: column-reverse;
+    height: 95vh;
+    width: 55vh;
+  }
+  .contentContainer {
+    width: 100%;
+    height: 70%;
+    padding-left: 0;
+    border-radius: 0 0 8px 8px;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+  .imageContainer {
+    border-radius: 5px 5px 0 0px;
+    height: 33%;
+    width: 100%;
+  }
+  .headerImage {
+    border-radius: 5px 5px 0 0px;
+  }
+  .imageContainer::before {
+    border-radius: 5px 5px 0 0px;
+  }
+  .contentTitle {
+    text-align: center;
+    margin-top: 5%;
+  }
+  .contentDescription {
+    text-align: center;
+    margin-top: 0;
+    line-height: 180%;
+    font-size: clamp(13px, 1vw, 80px);
+  }
+  .statsContainer {
+    flex-direction: column;
+    margin-top: 5%;
+    height: 45%;
+    margin-bottom: 5%;
+  }
+  .statsElem {
+    align-items: center;
+    font-size: clamp(10px, 1vw, 90px);
+  }
+  .statsElemCount {
+    font-size: clamp(20px, 1.5vw, 90px);
+  }
+}
+@media (max-height: 600px) {
+  .cardContainer {
+    height: 80vh;
+  }
+}
